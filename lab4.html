@@ -1,0 +1,191 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 4 - Responsive Webpage</title>
+
+    <style>
+        body {
+            background-color: #FAF7F0; 
+            color: #333;
+        }
+
+        header {
+            background-color: #89CFF0; 
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            background-color: #5DADE2; 
+            margin: 0;
+            padding: 0;
+        }
+		 nav li {
+            display: inline-block;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        nav a:hover {
+            background-color: #3498DB; 
+            text-decoration: underline;
+        }
+        nav a:active {
+        	background-color: #3498DB;
+        	text=decoration: underline;
+		}
+        section {
+            padding: 20px;
+            background: white;
+            margin: 15px auto;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 800px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        section h2 {
+            text-decoration: underline;
+            color: #2C3E50;
+            margin-bottom: 10px;
+        }
+        
+        video {
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            border: 2px solid #AED6F1;
+        }
+
+        form {
+            background-color: #F4F9FD;
+            padding: 15px;
+            border-radius: 10px;
+            max-width: 400px;
+            margin: auto;
+            box-shadow: 0 0 8px rgba(0,0,0,0.05);
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #2C3E50;
+        }
+
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #5DADE2;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #3498DB;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #2C3E50;
+            color: white;
+            padding: 10px;
+            margin-top: 20px;
+        }
+
+  		   (max-width: 600px) {
+            nav li {
+                display: block;
+                text-align: center;
+            }
+
+            form {
+                width: 90%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Students Survey</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <article>
+            <h2>Introduction</h2>
+            <p>Congratulations to all new students!</p>
+        </article>
+    </section>
+
+    <section id="about">
+        <article>
+            <h2>About This Page</h2>
+            <p>The purpose of this website is to welcome all new students from all courses.</p>
+        </article>
+    </section>
+
+    <section id="media">
+        <h2>Media</h2>
+        <video width="400" controls>
+            <source src="UMT.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label>Gender:</label>
+            <input type="radio" id="male" name="gender" value="male"> Male
+            <input type="radio" id="female" name="gender" value="female"> Female
+
+            <label>Favorite Hobbies:</label><br>
+            <input type="checkbox" name="hobby" value="Reading"> Reading
+            <input type="checkbox" name="hobby" value="Gaming"> Gaming
+            <input type="checkbox" name="hobby" value="Traveling"> Traveling
+
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Student Survey | All rights reserved</p>
+    </footer>
+</body>
+</html>
