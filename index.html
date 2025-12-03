@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love In The Clouds Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+	<div class="header-img-container">
+        <img src="Litc.jpg" alt="Love In The Clouds" />
+        <div class="overlay"></div>
+    	</div>
+    	<div class="header-text">
+        <h1>Love In The Clouds Quiz</h1>
+        <p> Let’s see how much you remember about the story!</p>
+    </header>
+    
+    <main>
+        <section id="quiz-container">
+            <div id="timer">Time: <span id="time">60</span>s</div>
+            <div id="question-container">
+                <h2 id="question">Question will appear here</h2>
+                <div id="options-container"></div>
+            </div>
+            <div id="feedback"></div>
+            <div id="controls">
+                <button id="submit-btn" onclick="checkAnswer()">Submit Answer</button>
+                <button id="next-btn" onclick="nextQuestion()" style="display:none;">Next Question</button>
+            </div>
+        </section>
+        
+        <section id="score-container" style="display:none;">
+            <h2>Quiz Complete!</h2>
+            <p>Your score: <span id="final-score">0</span>/<span id="total-questions">0</span></p>
+            <button onclick="startQuiz()">Restart Quiz</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>JavaScript Lab Module 6 - Quiz Application</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
